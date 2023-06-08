@@ -1,0 +1,227 @@
+[2023-06-08T10:52:50.665863+00:00 INFO] [plan:196] ################################################################################
+[2023-06-08T10:52:50.665996+00:00 INFO] [plan:197] Starting Reliably experiment: https://app.reliably.com/api/v1/organization/423320d0-f114-44d8-ba48-788577b2c4ac/experiments/1f9ee18a-9b03-4e44-b197-def008ec914e/raw
+[2023-06-08T10:52:50.666193+00:00 DEBUG] [__init__:206] Loading global control 'reliably-integration-slack'
+[2023-06-08T10:52:51.094020+00:00 DEBUG] [caching:24] Building activity cache...
+[2023-06-08T10:52:51.094166+00:00 DEBUG] [caching:35] Cached 1 activities
+[2023-06-08T10:52:51.094467+00:00 INFO] [experiment:58] Validating the experiment's syntax
+[2023-06-08T10:52:51.094690+00:00 DEBUG] [configuration:63] Loading configuration...
+[2023-06-08T10:52:51.094876+00:00 DEBUG] [secret:78] Loading secrets...
+[2023-06-08T10:52:51.094936+00:00 DEBUG] [secret:103] Done loading secrets
+[2023-06-08T10:52:51.372690+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'validate_control'
+[2023-06-08T10:52:51.372808+00:00 INFO] [experiment:109] Experiment looks valid
+[2023-06-08T10:52:51.372855+00:00 DEBUG] [caching:42] Clearing activities cache
+[2023-06-08T10:52:51.372906+00:00 DEBUG] [caching:24] Building activity cache...
+[2023-06-08T10:52:51.372947+00:00 DEBUG] [caching:35] Cached 1 activities
+[2023-06-08T10:52:51.373055+00:00 DEBUG] [configuration:63] Loading configuration...
+[2023-06-08T10:52:51.373137+00:00 DEBUG] [secret:78] Loading secrets...
+[2023-06-08T10:52:51.373177+00:00 DEBUG] [secret:103] Done loading secrets
+[2023-06-08T10:52:51.373216+00:00 DEBUG] [configuration:160] Loading dynamic configuration...
+[2023-06-08T10:52:51.373304+00:00 INFO] [run:369] Running experiment: Certificate is always valid and has not expired
+[2023-06-08T10:52:51.375176+00:00 DEBUG] [__init__:171] Initializing global control 'reliably-integration-slack'
+[2023-06-08T10:52:51.375290+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py' does not declare 'configure_control'
+[2023-06-08T10:52:51.375337+00:00 DEBUG] [__init__:64] Initializing controls
+[2023-06-08T10:52:51.375378+00:00 DEBUG] [__init__:73] Initializing control 'reliably'
+[2023-06-08T10:52:51.375428+00:00 DEBUG] [python:196] Control 'configure_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py'
+[2023-06-08T10:52:51.375555+00:00 DEBUG] [experiment:423] Configure Reliably's experiment control
+[2023-06-08T10:52:51.375755+00:00 DEBUG] [experiment:587] Sending plan '2b2cb97a-1140-4276-a841-84099566627d' status: running
+[2023-06-08T10:52:52.137247+00:00 INFO] [experiment:202] Reliably execution: 4cf0e97e-3620-4f39-a85f-a4ff5b3fcc9d
+[2023-06-08T10:52:52.381373+00:00 DEBUG] [experiment:612] Sending execution state: {'current': 'running', 'started_on': '2023-06-08T10:52:51.375597+00:00', 'plan_id': '2b2cb97a-1140-4276-a841-84099566627d'}
+[2023-06-08T10:52:52.907431+00:00 DEBUG] [experiment:81] Starting Reliably state checker now
+[2023-06-08T10:52:52.907548+00:00 INFO] [run:396] Steady-state strategy: default
+[2023-06-08T10:52:52.908582+00:00 INFO] [run:400] Rollbacks strategy: always
+[2023-06-08T10:52:52.908971+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'experiment'
+[2023-06-08T10:52:52.909510+00:00 DEBUG] [python:196] Control 'before_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py'
+[2023-06-08T10:52:52.910026+00:00 DEBUG] [__init__:459] Applying before-control 'reliably-integration-slack' on 'experiment'
+[2023-06-08T10:52:52.910423+00:00 DEBUG] [python:196] Control 'before_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:52.910986+00:00 DEBUG] [__init__:484] Before-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 59, in before_experiment_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:52.913215+00:00 DEBUG] [run:558] Running steady-state hypothesis before the method
+[2023-06-08T10:52:52.913300+00:00 INFO] [hypothesis:186] Steady state hypothesis: Capture certificate and perform the checks
+[2023-06-08T10:52:52.913382+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'hypothesis'
+[2023-06-08T10:52:52.913445+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_hypothesis_control'
+[2023-06-08T10:52:52.913491+00:00 DEBUG] [__init__:459] Applying before-control 'reliably-integration-slack' on 'hypothesis'
+[2023-06-08T10:52:52.913545+00:00 DEBUG] [python:196] Control 'before_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:52.913656+00:00 DEBUG] [__init__:484] Before-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 107, in before_hypothesis_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:52.914085+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'activity'
+[2023-06-08T10:52:52.914145+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_activity_control'
+[2023-06-08T10:52:52.914194+00:00 DEBUG] [__init__:459] Applying before-control 'reliably-integration-slack' on 'activity'
+[2023-06-08T10:52:52.914243+00:00 DEBUG] [python:196] Control 'before_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:52.914343+00:00 DEBUG] [__init__:484] Before-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 218, in before_activity_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:52.914686+00:00 INFO] [activity:215] Probe: capture-certificate
+[2023-06-08T10:52:53.415029+00:00 DEBUG] [python:33] Activity 'capture-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/probes.py'
+[2023-06-08T10:52:53.575188+00:00 DEBUG] [activity:235]   => succeeded with '{'conn': {'version': 'TLSv1.3', 'remote_addr': '75.2.60.5:443'}, 'cert': {'fingerprints': {'md5': 'b1cbd5c2a00cbc2114f81dd953428960', 'sha1': '735c302df5052960191618d34f2f58e3487be951', 'sha256': '631a8afbc1efabd321a8e1dca06149fd3ac5a519fe44522c6960295e83d6642f'}, 'extensions': {'subjectAltName': ['reliably.com', 'www.reliably.com']}, 'issuer': "CN=R3,O=Let's Encrypt,C=US", 'subject': 'CN=reliably.com', 'serial': '366996922602068184606233205979119837107355', 'version': 'v3', 'signature_hash': 'sha256', 'not_valid_before': '2023-05-26T08:30:11', 'not_valid_after': '2023-08-24T08:30:10'}}'
+[2023-06-08T10:52:53.897192+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'activity'
+[2023-06-08T10:52:53.897362+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_activity_control'
+[2023-06-08T10:52:53.897416+00:00 DEBUG] [__init__:459] Applying after-control 'reliably-integration-slack' on 'activity'
+[2023-06-08T10:52:53.897479+00:00 DEBUG] [python:196] Control 'after_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:53.897617+00:00 DEBUG] [__init__:484] After-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 237, in after_activity_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:53.898060+00:00 DEBUG] [hypothesis:226] allowed tolerance is {'name': 'verifiy-tls-certificate', 'type': 'probe', 'provider': {'func': 'verify_tls_cert', 'type': 'python', 'module': 'chaosreliably.activities.tls.tolerances', 'arguments': {'issuer': '${reliably_issuer}', 'alt_names': '${reliably_alt_names}', 'expire_after': '${reliably_expire_after}', 'fingerprint_sha256': '${reliably_fingerprint}'}}}
+[2023-06-08T10:52:53.898148+00:00 DEBUG] [python:33] Activity 'verifiy-tls-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/tolerances.py'
+[2023-06-08T10:52:53.898316+00:00 DEBUG] [tolerances:29] Cert expires on 2023-08-24T08:30:10
+[2023-06-08T10:52:53.898391+00:00 DEBUG] [tolerances:53] Alt names: {'reliably.com', 'www.reliably.com'} / Expected alt names: ['reliably.com', 'www.reliably.com']
+[2023-06-08T10:52:53.898444+00:00 INFO] [hypothesis:236] Steady state hypothesis is met!
+[2023-06-08T10:52:53.898514+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'hypothesis'
+[2023-06-08T10:52:53.898569+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_hypothesis_control'
+[2023-06-08T10:52:53.898643+00:00 DEBUG] [__init__:459] Applying after-control 'reliably-integration-slack' on 'hypothesis'
+[2023-06-08T10:52:53.898699+00:00 DEBUG] [python:196] Control 'after_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:53.898808+00:00 DEBUG] [__init__:484] After-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 129, in after_hypothesis_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:53.899166+00:00 INFO] [run:663] Playing your experiment's method now...
+[2023-06-08T10:52:53.899251+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'method'
+[2023-06-08T10:52:53.899307+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_method_control'
+[2023-06-08T10:52:53.899400+00:00 INFO] [activity:133] No declared activities, let's move on.
+[2023-06-08T10:52:53.899468+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'method'
+[2023-06-08T10:52:53.899519+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_method_control'
+[2023-06-08T10:52:53.899580+00:00 DEBUG] [run:590] Running steady-state hypothesis after the method
+[2023-06-08T10:52:53.899633+00:00 INFO] [hypothesis:186] Steady state hypothesis: Capture certificate and perform the checks
+[2023-06-08T10:52:53.899697+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'hypothesis'
+[2023-06-08T10:52:53.899746+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_hypothesis_control'
+[2023-06-08T10:52:53.899790+00:00 DEBUG] [__init__:459] Applying before-control 'reliably-integration-slack' on 'hypothesis'
+[2023-06-08T10:52:53.899837+00:00 DEBUG] [python:196] Control 'before_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:53.899941+00:00 DEBUG] [__init__:484] Before-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 107, in before_hypothesis_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:53.900290+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'activity'
+[2023-06-08T10:52:53.900348+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_activity_control'
+[2023-06-08T10:52:53.900392+00:00 DEBUG] [__init__:459] Applying before-control 'reliably-integration-slack' on 'activity'
+[2023-06-08T10:52:53.900439+00:00 DEBUG] [python:196] Control 'before_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:53.900532+00:00 DEBUG] [__init__:484] Before-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 218, in before_activity_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:53.900866+00:00 INFO] [activity:215] Probe: capture-certificate
+[2023-06-08T10:52:54.589717+00:00 DEBUG] [python:33] Activity 'capture-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/probes.py'
+[2023-06-08T10:52:54.702036+00:00 DEBUG] [activity:235]   => succeeded with '{'conn': {'version': 'TLSv1.3', 'remote_addr': '75.2.60.5:443'}, 'cert': {'fingerprints': {'md5': 'b1cbd5c2a00cbc2114f81dd953428960', 'sha1': '735c302df5052960191618d34f2f58e3487be951', 'sha256': '631a8afbc1efabd321a8e1dca06149fd3ac5a519fe44522c6960295e83d6642f'}, 'extensions': {'subjectAltName': ['reliably.com', 'www.reliably.com']}, 'issuer': "CN=R3,O=Let's Encrypt,C=US", 'subject': 'CN=reliably.com', 'serial': '366996922602068184606233205979119837107355', 'version': 'v3', 'signature_hash': 'sha256', 'not_valid_before': '2023-05-26T08:30:11', 'not_valid_after': '2023-08-24T08:30:10'}}'
+[2023-06-08T10:52:55.052638+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'activity'
+[2023-06-08T10:52:55.052798+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_activity_control'
+[2023-06-08T10:52:55.052854+00:00 DEBUG] [__init__:459] Applying after-control 'reliably-integration-slack' on 'activity'
+[2023-06-08T10:52:55.052912+00:00 DEBUG] [python:196] Control 'after_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:55.053051+00:00 DEBUG] [__init__:484] After-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 237, in after_activity_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:55.053496+00:00 DEBUG] [hypothesis:226] allowed tolerance is {'name': 'verifiy-tls-certificate', 'type': 'probe', 'provider': {'func': 'verify_tls_cert', 'type': 'python', 'module': 'chaosreliably.activities.tls.tolerances', 'arguments': {'issuer': '${reliably_issuer}', 'alt_names': '${reliably_alt_names}', 'expire_after': '${reliably_expire_after}', 'fingerprint_sha256': '${reliably_fingerprint}', 'value': {'conn': {'version': 'TLSv1.3', 'remote_addr': '75.2.60.5:443'}, 'cert': {'fingerprints': {'md5': 'b1cbd5c2a00cbc2114f81dd953428960', 'sha1': '735c302df5052960191618d34f2f58e3487be951', 'sha256': '631a8afbc1efabd321a8e1dca06149fd3ac5a519fe44522c6960295e83d6642f'}, 'extensions': {'subjectAltName': ['reliably.com', 'www.reliably.com']}, 'issuer': "CN=R3,O=Let's Encrypt,C=US", 'subject': 'CN=reliably.com', 'serial': '366996922602068184606233205979119837107355', 'version': 'v3', 'signature_hash': 'sha256', 'not_valid_before': '2023-05-26T08:30:11', 'not_valid_after': '2023-08-24T08:30:10'}}}}}
+[2023-06-08T10:52:55.053576+00:00 DEBUG] [python:33] Activity 'verifiy-tls-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/tolerances.py'
+[2023-06-08T10:52:55.053734+00:00 DEBUG] [tolerances:29] Cert expires on 2023-08-24T08:30:10
+[2023-06-08T10:52:55.053805+00:00 DEBUG] [tolerances:53] Alt names: {'reliably.com', 'www.reliably.com'} / Expected alt names: ['reliably.com', 'www.reliably.com']
+[2023-06-08T10:52:55.053858+00:00 INFO] [hypothesis:236] Steady state hypothesis is met!
+[2023-06-08T10:52:55.053923+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'hypothesis'
+[2023-06-08T10:52:55.053976+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_hypothesis_control'
+[2023-06-08T10:52:55.054021+00:00 DEBUG] [__init__:459] Applying after-control 'reliably-integration-slack' on 'hypothesis'
+[2023-06-08T10:52:55.054067+00:00 DEBUG] [python:196] Control 'after_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:55.054166+00:00 DEBUG] [__init__:484] After-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 129, in after_hypothesis_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:55.054514+00:00 WARNING] [run:706] Rollbacks were explicitly requested to be played
+[2023-06-08T10:52:55.054573+00:00 INFO] [run:943] Let's rollback...
+[2023-06-08T10:52:55.054682+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'rollback'
+[2023-06-08T10:52:55.054743+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_rollback_control'
+[2023-06-08T10:52:55.054790+00:00 INFO] [rollback:31] No declared rollbacks, let's move on.
+[2023-06-08T10:52:55.054848+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'rollback'
+[2023-06-08T10:52:55.054899+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_rollback_control'
+[2023-06-08T10:52:55.054957+00:00 INFO] [run:510] Experiment ended with status: completed
+[2023-06-08T10:52:55.055008+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'experiment'
+[2023-06-08T10:52:55.055059+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_experiment_control'
+[2023-06-08T10:52:55.055103+00:00 DEBUG] [__init__:459] Applying after-control 'reliably-integration-slack' on 'experiment'
+[2023-06-08T10:52:55.055151+00:00 DEBUG] [python:196] Control 'after_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-06-08T10:52:55.055257+00:00 DEBUG] [__init__:484] After-control 'reliably-integration-slack' failed
+Traceback (most recent call last):
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/__init__.py", line 465, in apply_controls
+    apply_python_control(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaoslib/control/python.py", line 179, in apply_python_control
+    func(context=context, **arguments)
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 77, in after_experiment_control
+    send(
+  File "/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py", line 299, in send
+    raise InvalidActivity("missing slack channel name")
+chaoslib.exceptions.InvalidActivity: missing slack channel name
+[2023-06-08T10:52:55.055576+00:00 DEBUG] [__init__:103] Cleaning up controls
+[2023-06-08T10:52:55.055630+00:00 DEBUG] [__init__:112] Cleaning up control 'reliably'
+[2023-06-08T10:52:55.055680+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'cleanup_control'
+[2023-06-08T10:52:55.055725+00:00 DEBUG] [__init__:265] Cleaning up global control 'reliably-integration-slack'
+[2023-06-08T10:52:55.055772+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py' does not declare 'cleanup_control'
+[2023-06-08T10:52:55.055820+00:00 INFO] [experiment:248] Finishing Reliably execution...
+[2023-06-08T10:52:55.401150+00:00 DEBUG] [experiment:163] Stopping Reliably state checker now
+[2023-06-08T10:52:55.401511+00:00 DEBUG] [experiment:494] Completing execution '4cf0e97e-3620-4f39-a85f-a4ff5b3fcc9d' status: completed
+[2023-06-08T10:52:55.830979+00:00 DEBUG] [experiment:587] Sending plan '2b2cb97a-1140-4276-a841-84099566627d' status: completed
+[2023-06-08T10:52:56.176612+00:00 DEBUG] [experiment:612] Sending execution state: {'current': 'finished', 'status': 'completed', 'deviated': False, 'plan_id': '2b2cb97a-1140-4276-a841-84099566627d'}
+[2023-06-08T10:52:56.650096+00:00 INFO] [experiment:311] Finished Reliably execution. Bye!
+[2023-06-08T10:52:56.650285+00:00 DEBUG] [caching:42] Clearing activities cache
