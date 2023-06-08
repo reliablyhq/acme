@@ -1,0 +1,180 @@
+{
+  "chaoslib-version": "1.34.1",
+  "platform": "Linux-5.15.0-1039-azure-x86_64-with-glibc2.35",
+  "node": "fv-az585-282",
+  "experiment": {
+    "tags": [
+      "latency"
+    ],
+    "title": "Latency remains under 300ms",
+    "method": [],
+    "runtime": {
+      "hypothesis": {
+        "strategy": "after-method-only"
+      }
+    },
+    "version": "1.0.0",
+    "controls": [
+      {
+        "name": "reliably",
+        "provider": {
+          "type": "python",
+          "module": "chaosreliably.controls.experiment",
+          "arguments": {
+            "exp_id": "40053e3c-b663-4554-99f3-faa3f51bbf2e",
+            "org_id": "423320d0-f114-44d8-ba48-788577b2c4ac"
+          }
+        }
+      }
+    ],
+    "extensions": [
+      {
+        "name": "chatgpt",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Can you describe the impacts of increasing latency in a complex system?"
+          },
+          {
+            "role": "user",
+            "content": "How about in a microservices architecture?"
+          },
+          {
+            "role": "user",
+            "content": "Can you suggest good SLO to monitor and alert me?"
+          }
+        ]
+      },
+      {
+        "name": "reliably",
+        "pauses": [],
+        "termination": null,
+        "execution_url": "https://app.reliably.com/executions/view/?id=636c3d20-866c-4b22-a11a-6329eaa8dfbb&exp=40053e3c-b663-4554-99f3-faa3f51bbf2e",
+        "extra": [
+          {
+            "type": "url",
+            "provider": "github",
+            "topic": "commit",
+            "value": "https://github.com/reliablyhq/acme/tree/main/plans/64d7adf9-f1bc-4788-8bf4-67c87c8f40ea"
+          },
+          {
+            "type": "url",
+            "provider": "github",
+            "topic": "repo",
+            "value": "https://github.com/reliablyhq/acme"
+          },
+          {
+            "type": "url",
+            "provider": "github",
+            "topic": "run",
+            "value": "https://github.com/reliablyhq/acme/actions/runs/5212968117"
+          }
+        ],
+        "chaostoolkit_extensions": [
+          {
+            "name": "chaostoolkit-reliably",
+            "version": "0.51.0"
+          }
+        ]
+      }
+    ],
+    "description": "Verify that our endpoint responds under a reasonable amount of time",
+    "configuration": {
+      "reliably_url": {
+        "key": "RELIABLY_PARAM_URL",
+        "type": "env",
+        "default": "https://demo.reliably.dev"
+      },
+      "reliably_latency": {
+        "key": "RELIABLY_PARAM_LATENCY",
+        "type": "env",
+        "default": 0.3
+      }
+    },
+    "contributions": {
+      "errors": "high",
+      "latency": "high",
+      "security": "none",
+      "availability": "low"
+    },
+    "steady-state-hypothesis": {
+      "title": "capture-response-time-and-verify-it",
+      "probes": [
+        {
+          "name": "measure-endpoint-response-time",
+          "type": "probe",
+          "provider": {
+            "func": "measure_response_time",
+            "type": "python",
+            "module": "chaosreliably.activities.http.probes",
+            "arguments": {
+              "url": "${reliably_url}"
+            }
+          },
+          "tolerance": {
+            "name": "validate-response-time",
+            "type": "probe",
+            "provider": {
+              "func": "response_time_must_be_under",
+              "type": "python",
+              "module": "chaosreliably.activities.http.tolerances",
+              "arguments": {
+                "latency": "${reliably_latency}",
+                "value": 0.563987
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "start": "2023-06-08T15:26:25.922408",
+  "status": "failed",
+  "deviated": true,
+  "steady_states": {
+    "before": null,
+    "after": {
+      "steady_state_met": false,
+      "probes": [
+        {
+          "activity": {
+            "name": "measure-endpoint-response-time",
+            "type": "probe",
+            "provider": {
+              "func": "measure_response_time",
+              "type": "python",
+              "module": "chaosreliably.activities.http.probes",
+              "arguments": {
+                "url": "${reliably_url}"
+              }
+            },
+            "tolerance": {
+              "name": "validate-response-time",
+              "type": "probe",
+              "provider": {
+                "func": "response_time_must_be_under",
+                "type": "python",
+                "module": "chaosreliably.activities.http.tolerances",
+                "arguments": {
+                  "latency": "${reliably_latency}",
+                  "value": 0.563987
+                }
+              }
+            }
+          },
+          "output": 0.563987,
+          "start": "2023-06-08T15:26:27.538884",
+          "status": "succeeded",
+          "end": "2023-06-08T15:26:28.777842",
+          "duration": 1.238958,
+          "tolerance_met": false
+        }
+      ]
+    },
+    "during": []
+  },
+  "run": [],
+  "rollbacks": [],
+  "end": "2023-06-08T15:26:29.097064",
+  "duration": 3.1769187450408936
+}

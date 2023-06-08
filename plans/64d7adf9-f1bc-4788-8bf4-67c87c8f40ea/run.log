@@ -1,0 +1,74 @@
+[2023-06-08T15:26:25.535529+00:00 INFO] [plan:196] ################################################################################
+[2023-06-08T15:26:25.535745+00:00 INFO] [plan:197] Starting Reliably experiment: https://app.reliably.com/api/v1/organization/423320d0-f114-44d8-ba48-788577b2c4ac/experiments/40053e3c-b663-4554-99f3-faa3f51bbf2e/raw
+[2023-06-08T15:26:25.900568+00:00 DEBUG] [caching:24] Building activity cache...
+[2023-06-08T15:26:25.900952+00:00 DEBUG] [caching:35] Cached 1 activities
+[2023-06-08T15:26:25.901212+00:00 INFO] [experiment:58] Validating the experiment's syntax
+[2023-06-08T15:26:25.901538+00:00 DEBUG] [configuration:63] Loading configuration...
+[2023-06-08T15:26:25.901737+00:00 DEBUG] [secret:78] Loading secrets...
+[2023-06-08T15:26:25.901851+00:00 DEBUG] [secret:103] Done loading secrets
+[2023-06-08T15:26:25.918283+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'validate_control'
+[2023-06-08T15:26:25.918389+00:00 INFO] [experiment:109] Experiment looks valid
+[2023-06-08T15:26:25.918483+00:00 DEBUG] [caching:42] Clearing activities cache
+[2023-06-08T15:26:25.918837+00:00 DEBUG] [caching:24] Building activity cache...
+[2023-06-08T15:26:25.918992+00:00 DEBUG] [caching:35] Cached 1 activities
+[2023-06-08T15:26:25.919327+00:00 DEBUG] [configuration:63] Loading configuration...
+[2023-06-08T15:26:25.919431+00:00 DEBUG] [secret:78] Loading secrets...
+[2023-06-08T15:26:25.919602+00:00 DEBUG] [secret:103] Done loading secrets
+[2023-06-08T15:26:25.919766+00:00 DEBUG] [configuration:160] Loading dynamic configuration...
+[2023-06-08T15:26:25.920089+00:00 INFO] [run:369] Running experiment: Latency remains under 300ms
+[2023-06-08T15:26:25.922489+00:00 DEBUG] [__init__:64] Initializing controls
+[2023-06-08T15:26:25.922625+00:00 DEBUG] [__init__:73] Initializing control 'reliably'
+[2023-06-08T15:26:25.922909+00:00 DEBUG] [python:196] Control 'configure_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py'
+[2023-06-08T15:26:25.923205+00:00 DEBUG] [experiment:423] Configure Reliably's experiment control
+[2023-06-08T15:26:25.923599+00:00 DEBUG] [experiment:587] Sending plan '64d7adf9-f1bc-4788-8bf4-67c87c8f40ea' status: running
+[2023-06-08T15:26:26.787483+00:00 INFO] [experiment:202] Reliably execution: 636c3d20-866c-4b22-a11a-6329eaa8dfbb
+[2023-06-08T15:26:27.133527+00:00 DEBUG] [experiment:612] Sending execution state: {'current': 'running', 'started_on': '2023-06-08T15:26:25.923276+00:00', 'plan_id': '64d7adf9-f1bc-4788-8bf4-67c87c8f40ea'}
+[2023-06-08T15:26:27.528415+00:00 DEBUG] [experiment:81] Starting Reliably state checker now
+[2023-06-08T15:26:27.528554+00:00 INFO] [run:396] Steady-state strategy: after-method-only
+[2023-06-08T15:26:27.529721+00:00 INFO] [run:400] Rollbacks strategy: always
+[2023-06-08T15:26:27.530157+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'experiment'
+[2023-06-08T15:26:27.530661+00:00 DEBUG] [python:196] Control 'before_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py'
+[2023-06-08T15:26:27.531261+00:00 INFO] [run:663] Playing your experiment's method now...
+[2023-06-08T15:26:27.531969+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'method'
+[2023-06-08T15:26:27.532607+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_method_control'
+[2023-06-08T15:26:27.533463+00:00 INFO] [activity:133] No declared activities, let's move on.
+[2023-06-08T15:26:27.533975+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'method'
+[2023-06-08T15:26:27.534577+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_method_control'
+[2023-06-08T15:26:27.535059+00:00 DEBUG] [run:590] Running steady-state hypothesis after the method
+[2023-06-08T15:26:27.535504+00:00 INFO] [hypothesis:186] Steady state hypothesis: capture-response-time-and-verify-it
+[2023-06-08T15:26:27.535995+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'hypothesis'
+[2023-06-08T15:26:27.536433+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_hypothesis_control'
+[2023-06-08T15:26:27.537361+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'activity'
+[2023-06-08T15:26:27.537944+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_activity_control'
+[2023-06-08T15:26:27.538475+00:00 INFO] [activity:215] Probe: measure-endpoint-response-time
+[2023-06-08T15:26:28.120581+00:00 DEBUG] [python:33] Activity 'measure-endpoint-response-time' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/http/probes.py'
+[2023-06-08T15:26:28.777615+00:00 DEBUG] [activity:235]   => succeeded with '0.563987'
+[2023-06-08T15:26:29.095215+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'activity'
+[2023-06-08T15:26:29.095541+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_activity_control'
+[2023-06-08T15:26:29.095654+00:00 DEBUG] [hypothesis:226] allowed tolerance is {'name': 'validate-response-time', 'type': 'probe', 'provider': {'func': 'response_time_must_be_under', 'type': 'python', 'module': 'chaosreliably.activities.http.tolerances', 'arguments': {'latency': '${reliably_latency}'}}}
+[2023-06-08T15:26:29.095784+00:00 DEBUG] [python:33] Activity 'validate-response-time' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/http/tolerances.py'
+[2023-06-08T15:26:29.096033+00:00 DEBUG] [tolerances:13] Verify that response time is under: 0.3
+[2023-06-08T15:26:29.096163+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'hypothesis'
+[2023-06-08T15:26:29.096283+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_hypothesis_control'
+[2023-06-08T15:26:29.096379+00:00 CRITICAL] [run:601] Steady state probe 'measure-endpoint-response-time' is not in the given tolerance so failing this experiment
+[2023-06-08T15:26:29.096467+00:00 WARNING] [run:706] Rollbacks were explicitly requested to be played
+[2023-06-08T15:26:29.096540+00:00 INFO] [run:943] Let's rollback...
+[2023-06-08T15:26:29.096635+00:00 DEBUG] [__init__:459] Applying before-control 'reliably' on 'rollback'
+[2023-06-08T15:26:29.096720+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_rollback_control'
+[2023-06-08T15:26:29.096795+00:00 INFO] [rollback:31] No declared rollbacks, let's move on.
+[2023-06-08T15:26:29.096886+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'rollback'
+[2023-06-08T15:26:29.096983+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_rollback_control'
+[2023-06-08T15:26:29.097100+00:00 INFO] [run:510] Experiment ended with status: deviated
+[2023-06-08T15:26:29.097207+00:00 INFO] [run:512] The steady-state has deviated, a weakness may have been discovered
+[2023-06-08T15:26:29.097276+00:00 DEBUG] [__init__:459] Applying after-control 'reliably' on 'experiment'
+[2023-06-08T15:26:29.097370+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_experiment_control'
+[2023-06-08T15:26:29.097437+00:00 DEBUG] [__init__:103] Cleaning up controls
+[2023-06-08T15:26:29.097557+00:00 DEBUG] [__init__:112] Cleaning up control 'reliably'
+[2023-06-08T15:26:29.097638+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'cleanup_control'
+[2023-06-08T15:26:29.097780+00:00 INFO] [experiment:248] Finishing Reliably execution...
+[2023-06-08T15:26:29.099083+00:00 DEBUG] [experiment:163] Stopping Reliably state checker now
+[2023-06-08T15:26:29.099471+00:00 DEBUG] [experiment:494] Completing execution '636c3d20-866c-4b22-a11a-6329eaa8dfbb' status: failed
+[2023-06-08T15:26:29.466147+00:00 DEBUG] [experiment:587] Sending plan '64d7adf9-f1bc-4788-8bf4-67c87c8f40ea' status: completed
+[2023-06-08T15:26:29.831330+00:00 DEBUG] [experiment:612] Sending execution state: {'current': 'finished', 'status': 'failed', 'deviated': True, 'plan_id': '64d7adf9-f1bc-4788-8bf4-67c87c8f40ea'}
+[2023-06-08T15:26:30.409825+00:00 INFO] [experiment:311] Finished Reliably execution. Bye!
+[2023-06-08T15:26:30.410115+00:00 DEBUG] [caching:42] Clearing activities cache
