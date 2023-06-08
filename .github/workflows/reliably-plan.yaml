@@ -9,3 +9,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: reliablyhq/actions/plan@main
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
