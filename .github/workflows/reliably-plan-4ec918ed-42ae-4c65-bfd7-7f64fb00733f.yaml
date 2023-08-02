@@ -1,0 +1,21 @@
+jobs:
+  execute-reliably-plan:
+    environment: preprod
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_CHANNEL: '#acme'
+      uses: reliablyhq/actions/plan@main
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        org-id: 423320d0-f114-44d8-ba48-788577b2c4ac
+        plan-id: 4ec918ed-42ae-4c65-bfd7-7f64fb00733f
+        reliably-experiment-extra: '[{"type":"url","provider":"github","topic":"commit","value":"https://github.com/reliablyhq/acme/tree/main/plans/4ec918ed-42ae-4c65-bfd7-7f64fb00733f"}]'
+        reliably-host: app.reliably.com
+        reliably-service-token: ${{ secrets.RELIABLY_SERVICE_TOKEN }}
+        working-dir: plans/4ec918ed-42ae-4c65-bfd7-7f64fb00733f
+name: Reliably Plan 4ec918ed-42ae-4c65-bfd7-7f64fb00733f
+on:
+  workflow_dispatch: null
