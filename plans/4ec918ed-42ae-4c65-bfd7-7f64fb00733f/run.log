@@ -1,0 +1,117 @@
+[2023-08-02T08:25:45.814411+00:00 INFO] [plan:263] ################################################################################
+[2023-08-02T08:25:45.814559+00:00 INFO] [plan:264] Starting Reliably experiment: https://app.reliably.com/api/v1/organization/423320d0-f114-44d8-ba48-788577b2c4ac/experiments/1f9ee18a-9b03-4e44-b197-def008ec914e/raw
+[2023-08-02T08:25:45.814791+00:00 DEBUG] [__init__:206] Loading global control 'reliably-integration-slack'
+[2023-08-02T08:25:46.126222+00:00 DEBUG] [caching:24] Building activity cache...
+[2023-08-02T08:25:46.126368+00:00 DEBUG] [caching:35] Cached 1 activities
+[2023-08-02T08:25:46.126475+00:00 INFO] [experiment:58] Validating the experiment's syntax
+[2023-08-02T08:25:46.126531+00:00 DEBUG] [configuration:63] Loading configuration...
+[2023-08-02T08:25:46.126644+00:00 DEBUG] [secret:78] Loading secrets...
+[2023-08-02T08:25:46.126699+00:00 DEBUG] [secret:103] Done loading secrets
+[2023-08-02T08:25:46.260707+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'validate_control'
+[2023-08-02T08:25:46.260823+00:00 INFO] [experiment:109] Experiment looks valid
+[2023-08-02T08:25:46.260879+00:00 DEBUG] [caching:42] Clearing activities cache
+[2023-08-02T08:25:46.260967+00:00 DEBUG] [caching:24] Building activity cache...
+[2023-08-02T08:25:46.261021+00:00 DEBUG] [caching:35] Cached 1 activities
+[2023-08-02T08:25:46.261147+00:00 DEBUG] [configuration:63] Loading configuration...
+[2023-08-02T08:25:46.261233+00:00 DEBUG] [secret:78] Loading secrets...
+[2023-08-02T08:25:46.261278+00:00 DEBUG] [secret:103] Done loading secrets
+[2023-08-02T08:25:46.261318+00:00 DEBUG] [configuration:160] Loading dynamic configuration...
+[2023-08-02T08:25:46.261408+00:00 INFO] [run:369] Running experiment: Certificate is always valid and has not expired
+[2023-08-02T08:25:46.263310+00:00 DEBUG] [__init__:171] Initializing global control 'reliably-integration-slack'
+[2023-08-02T08:25:46.263398+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py' does not declare 'configure_control'
+[2023-08-02T08:25:46.263439+00:00 DEBUG] [__init__:64] Initializing controls
+[2023-08-02T08:25:46.263478+00:00 DEBUG] [__init__:73] Initializing control 'reliably'
+[2023-08-02T08:25:46.263524+00:00 DEBUG] [python:196] Control 'configure_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py'
+[2023-08-02T08:25:46.263625+00:00 DEBUG] [experiment:423] Configure Reliably's experiment control
+[2023-08-02T08:25:46.263821+00:00 DEBUG] [experiment:587] Sending plan '4ec918ed-42ae-4c65-bfd7-7f64fb00733f' status: running
+[2023-08-02T08:25:46.910631+00:00 INFO] [experiment:202] Reliably execution: f146205b-de00-4804-9ec8-4e149e41b69c
+[2023-08-02T08:25:47.195814+00:00 DEBUG] [experiment:612] Sending execution state: {'current': 'running', 'started_on': '2023-08-02T08:25:46.263664+00:00', 'plan_id': '4ec918ed-42ae-4c65-bfd7-7f64fb00733f'}
+[2023-08-02T08:25:47.513332+00:00 DEBUG] [experiment:81] Starting Reliably state checker now
+[2023-08-02T08:25:47.513464+00:00 INFO] [run:396] Steady-state strategy: default
+[2023-08-02T08:25:47.514696+00:00 INFO] [run:400] Rollbacks strategy: always
+[2023-08-02T08:25:47.515088+00:00 DEBUG] [__init__:460] Applying before-control 'reliably-integration-slack' on 'experiment'
+[2023-08-02T08:25:47.515460+00:00 DEBUG] [python:196] Control 'before_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:47.661035+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'experiment'
+[2023-08-02T08:25:47.661557+00:00 DEBUG] [python:196] Control 'before_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py'
+[2023-08-02T08:25:47.662748+00:00 DEBUG] [run:558] Running steady-state hypothesis before the method
+[2023-08-02T08:25:47.663244+00:00 INFO] [hypothesis:186] Steady state hypothesis: Capture certificate and perform the checks
+[2023-08-02T08:25:47.663862+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'hypothesis'
+[2023-08-02T08:25:47.664298+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_hypothesis_control'
+[2023-08-02T08:25:47.664919+00:00 DEBUG] [__init__:460] Applying before-control 'reliably-integration-slack' on 'hypothesis'
+[2023-08-02T08:25:47.665352+00:00 DEBUG] [python:196] Control 'before_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:47.806685+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'activity'
+[2023-08-02T08:25:47.807148+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_activity_control'
+[2023-08-02T08:25:47.807560+00:00 DEBUG] [__init__:460] Applying before-control 'reliably-integration-slack' on 'activity'
+[2023-08-02T08:25:47.807856+00:00 DEBUG] [python:196] Control 'before_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:47.929264+00:00 INFO] [activity:215] Probe: capture-certificate
+[2023-08-02T08:25:48.188800+00:00 DEBUG] [python:33] Activity 'capture-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/probes.py'
+[2023-08-02T08:25:48.306904+00:00 DEBUG] [activity:235]   => succeeded with '{'conn': {'version': 'TLSv1.3', 'remote_addr': '75.2.60.5:443'}, 'cert': {'fingerprints': {'md5': 'a9b9ad1e2ff89a7f780c7bad4455880b', 'sha1': '3981c462de7eace6de1f25b897e2fb10efd11571', 'sha256': '12aa48af8fde844aa7565b194dd2b6dff8c49eb9ef18e01918a93eba90b0bcfa'}, 'extensions': {'subjectAltName': ['reliably.com', 'www.reliably.com']}, 'issuer': "CN=R3,O=Let's Encrypt,C=US", 'subject': 'CN=reliably.com', 'serial': '304987335651862026430312962152596391703805', 'version': 'v3', 'signature_hash': 'sha256', 'not_valid_before': '2023-07-25T07:40:11', 'not_valid_after': '2023-10-23T07:40:10'}}'
+[2023-08-02T08:25:48.578510+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'activity'
+[2023-08-02T08:25:48.579009+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_activity_control'
+[2023-08-02T08:25:48.581614+00:00 DEBUG] [__init__:460] Applying after-control 'reliably-integration-slack' on 'activity'
+[2023-08-02T08:25:48.581756+00:00 DEBUG] [python:196] Control 'after_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:49.299282+00:00 DEBUG] [hypothesis:226] allowed tolerance is {'name': 'verifiy-tls-certificate', 'type': 'probe', 'provider': {'func': 'verify_tls_cert', 'type': 'python', 'module': 'chaosreliably.activities.tls.tolerances', 'arguments': {'issuer': '${reliably_issuer}', 'alt_names': '${reliably_alt_names}', 'expire_after': '${reliably_expire_after}', 'fingerprint_sha256': '${reliably_fingerprint}'}}}
+[2023-08-02T08:25:49.299875+00:00 DEBUG] [python:33] Activity 'verifiy-tls-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/tolerances.py'
+[2023-08-02T08:25:49.300394+00:00 DEBUG] [tolerances:29] Cert expires on 2023-10-23T07:40:10
+[2023-08-02T08:25:49.300657+00:00 DEBUG] [tolerances:53] Alt names: {'reliably.com', 'www.reliably.com'} / Expected alt names: ['reliably.com', 'www.reliably.com']
+[2023-08-02T08:25:49.300902+00:00 INFO] [hypothesis:236] Steady state hypothesis is met!
+[2023-08-02T08:25:49.301145+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'hypothesis'
+[2023-08-02T08:25:49.301370+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_hypothesis_control'
+[2023-08-02T08:25:49.301632+00:00 DEBUG] [__init__:460] Applying after-control 'reliably-integration-slack' on 'hypothesis'
+[2023-08-02T08:25:49.301860+00:00 DEBUG] [python:196] Control 'after_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:49.649767+00:00 INFO] [run:679] Playing your experiment's method now...
+[2023-08-02T08:25:49.650221+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'method'
+[2023-08-02T08:25:49.650485+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_method_control'
+[2023-08-02T08:25:49.650768+00:00 INFO] [activity:133] No declared activities, let's move on.
+[2023-08-02T08:25:49.651007+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'method'
+[2023-08-02T08:25:49.651229+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_method_control'
+[2023-08-02T08:25:49.651496+00:00 DEBUG] [run:598] Running steady-state hypothesis after the method
+[2023-08-02T08:25:49.651716+00:00 INFO] [hypothesis:186] Steady state hypothesis: Capture certificate and perform the checks
+[2023-08-02T08:25:49.651957+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'hypothesis'
+[2023-08-02T08:25:49.652203+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_hypothesis_control'
+[2023-08-02T08:25:49.652446+00:00 DEBUG] [__init__:460] Applying before-control 'reliably-integration-slack' on 'hypothesis'
+[2023-08-02T08:25:49.652672+00:00 DEBUG] [python:196] Control 'before_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:49.775465+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'activity'
+[2023-08-02T08:25:49.775872+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_activity_control'
+[2023-08-02T08:25:49.776158+00:00 DEBUG] [__init__:460] Applying before-control 'reliably-integration-slack' on 'activity'
+[2023-08-02T08:25:49.776398+00:00 DEBUG] [python:196] Control 'before_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:49.892073+00:00 INFO] [activity:215] Probe: capture-certificate
+[2023-08-02T08:25:50.283120+00:00 DEBUG] [python:33] Activity 'capture-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/probes.py'
+[2023-08-02T08:25:50.345765+00:00 DEBUG] [activity:235]   => succeeded with '{'conn': {'version': 'TLSv1.3', 'remote_addr': '75.2.60.5:443'}, 'cert': {'fingerprints': {'md5': 'a9b9ad1e2ff89a7f780c7bad4455880b', 'sha1': '3981c462de7eace6de1f25b897e2fb10efd11571', 'sha256': '12aa48af8fde844aa7565b194dd2b6dff8c49eb9ef18e01918a93eba90b0bcfa'}, 'extensions': {'subjectAltName': ['reliably.com', 'www.reliably.com']}, 'issuer': "CN=R3,O=Let's Encrypt,C=US", 'subject': 'CN=reliably.com', 'serial': '304987335651862026430312962152596391703805', 'version': 'v3', 'signature_hash': 'sha256', 'not_valid_before': '2023-07-25T07:40:11', 'not_valid_after': '2023-10-23T07:40:10'}}'
+[2023-08-02T08:25:50.677496+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'activity'
+[2023-08-02T08:25:50.677915+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_activity_control'
+[2023-08-02T08:25:50.678180+00:00 DEBUG] [__init__:460] Applying after-control 'reliably-integration-slack' on 'activity'
+[2023-08-02T08:25:50.678426+00:00 DEBUG] [python:196] Control 'after_activity_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:51.060282+00:00 DEBUG] [hypothesis:226] allowed tolerance is {'name': 'verifiy-tls-certificate', 'type': 'probe', 'provider': {'func': 'verify_tls_cert', 'type': 'python', 'module': 'chaosreliably.activities.tls.tolerances', 'arguments': {'issuer': '${reliably_issuer}', 'alt_names': '${reliably_alt_names}', 'expire_after': '${reliably_expire_after}', 'fingerprint_sha256': '${reliably_fingerprint}', 'value': {'conn': {'version': 'TLSv1.3', 'remote_addr': '75.2.60.5:443'}, 'cert': {'fingerprints': {'md5': 'a9b9ad1e2ff89a7f780c7bad4455880b', 'sha1': '3981c462de7eace6de1f25b897e2fb10efd11571', 'sha256': '12aa48af8fde844aa7565b194dd2b6dff8c49eb9ef18e01918a93eba90b0bcfa'}, 'extensions': {'subjectAltName': ['reliably.com', 'www.reliably.com']}, 'issuer': "CN=R3,O=Let's Encrypt,C=US", 'subject': 'CN=reliably.com', 'serial': '304987335651862026430312962152596391703805', 'version': 'v3', 'signature_hash': 'sha256', 'not_valid_before': '2023-07-25T07:40:11', 'not_valid_after': '2023-10-23T07:40:10'}}}}}
+[2023-08-02T08:25:51.061025+00:00 DEBUG] [python:33] Activity 'verifiy-tls-certificate' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/activities/tls/tolerances.py'
+[2023-08-02T08:25:51.061439+00:00 DEBUG] [tolerances:29] Cert expires on 2023-10-23T07:40:10
+[2023-08-02T08:25:51.061683+00:00 DEBUG] [tolerances:53] Alt names: {'reliably.com', 'www.reliably.com'} / Expected alt names: ['reliably.com', 'www.reliably.com']
+[2023-08-02T08:25:51.061917+00:00 INFO] [hypothesis:236] Steady state hypothesis is met!
+[2023-08-02T08:25:51.062152+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'hypothesis'
+[2023-08-02T08:25:51.062376+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_hypothesis_control'
+[2023-08-02T08:25:51.062649+00:00 DEBUG] [__init__:460] Applying after-control 'reliably-integration-slack' on 'hypothesis'
+[2023-08-02T08:25:51.062876+00:00 DEBUG] [python:196] Control 'after_hypothesis_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:51.415755+00:00 WARNING] [run:722] Rollbacks were explicitly requested to be played
+[2023-08-02T08:25:51.415897+00:00 INFO] [run:959] Let's rollback...
+[2023-08-02T08:25:51.415986+00:00 DEBUG] [__init__:460] Applying before-control 'reliably' on 'rollback'
+[2023-08-02T08:25:51.416052+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'before_rollback_control'
+[2023-08-02T08:25:51.416104+00:00 INFO] [rollback:31] No declared rollbacks, let's move on.
+[2023-08-02T08:25:51.416165+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'rollback'
+[2023-08-02T08:25:51.416217+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_rollback_control'
+[2023-08-02T08:25:51.416277+00:00 INFO] [run:510] Experiment ended with status: completed
+[2023-08-02T08:25:51.416334+00:00 DEBUG] [__init__:460] Applying after-control 'reliably-integration-slack' on 'experiment'
+[2023-08-02T08:25:51.416390+00:00 DEBUG] [python:196] Control 'after_experiment_control' loaded from '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py'
+[2023-08-02T08:25:51.724112+00:00 DEBUG] [__init__:460] Applying after-control 'reliably' on 'experiment'
+[2023-08-02T08:25:51.724705+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'after_experiment_control'
+[2023-08-02T08:25:51.724951+00:00 DEBUG] [__init__:103] Cleaning up controls
+[2023-08-02T08:25:51.725041+00:00 DEBUG] [__init__:112] Cleaning up control 'reliably'
+[2023-08-02T08:25:51.725105+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosreliably/controls/experiment.py' does not declare 'cleanup_control'
+[2023-08-02T08:25:51.725157+00:00 DEBUG] [__init__:265] Cleaning up global control 'reliably-integration-slack'
+[2023-08-02T08:25:51.725205+00:00 DEBUG] [python:192] Control module '/home/runner/work/acme/acme/.venv/lib/python3.11/site-packages/chaosslack/control.py' does not declare 'cleanup_control'
+[2023-08-02T08:25:51.725894+00:00 INFO] [experiment:248] Finishing Reliably execution...
+[2023-08-02T08:25:51.785603+00:00 DEBUG] [experiment:163] Stopping Reliably state checker now
+[2023-08-02T08:25:51.785942+00:00 DEBUG] [experiment:494] Completing execution 'f146205b-de00-4804-9ec8-4e149e41b69c' status: completed
+[2023-08-02T08:25:52.131066+00:00 DEBUG] [experiment:587] Sending plan '4ec918ed-42ae-4c65-bfd7-7f64fb00733f' status: completed
+[2023-08-02T08:25:52.427453+00:00 DEBUG] [experiment:612] Sending execution state: {'current': 'finished', 'status': 'completed', 'deviated': False, 'plan_id': '4ec918ed-42ae-4c65-bfd7-7f64fb00733f'}
+[2023-08-02T08:25:52.866756+00:00 INFO] [experiment:311] Finished Reliably execution. Bye!
+[2023-08-02T08:25:52.867222+00:00 DEBUG] [caching:42] Clearing activities cache
